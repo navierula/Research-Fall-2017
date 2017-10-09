@@ -59,4 +59,18 @@ for idx, item in enumerate(data):
             max_data.append(item + ("max",))
         else:
             max_data.append(item + ("",))
+            
+# apply algorithm for finding minima in data    
+min_data = []
+for idx, item in enumerate(max_data):
+    if idx > 0:
+        prev = max_data[idx-1][1]
+        curr = item[1]
+        if prev < curr:
+            min_data.append(item + ("min",))
+        else:
+            min_data.append(item + ("",))
+            
+            
+            
     
