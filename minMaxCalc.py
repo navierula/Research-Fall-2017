@@ -69,8 +69,19 @@ for idx, item in enumerate(max_data):
     else:
         min_data.append(item + ("",))
 
+all_data = min_data
 
+# count maxima number
+max_count = 0
+for item in all_data:
+    if item[2] == "max":
+        max_count += 1 
+print(max_count)
 
-            
-            
+# count minima number
+min_count = 0
+for item in all_data:
+    if item[3] == "min":
+        min_count += 1 
+print(min_count)
     
