@@ -85,3 +85,5 @@ for item in all_data:
         min_count += 1 
 print(min_count)
     
+df = pd.DataFrame(data, columns=['Time', 'Load', 'Max', 'Min'])
+df
