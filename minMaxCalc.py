@@ -29,7 +29,7 @@ This is the criteria I will use to find the minima:
  - initialize a flag value to false
  - if the force in the previous row is bigger than the force in the next row, write the new row to the cache (leave the flag as false)
  - if the force in the previous row is smaller than the force in the next row, write the new row to the cache and mark it as a min cycle 
- (change the flag to true)<
+ (change the flag to true)
  
 
 """
@@ -48,6 +48,21 @@ for item in df.index:
 data = []
 for i, j in zip(time, load):
     data.append((i,j))
+    
+max_data = []
+for idx, item in enumerate(data):
+    if idx > 0:
+        # next_item, prev_item
+        print(item[1], data[idx-1])
+    
+    
+li = range(10)
+
+for i, item in enumerate(li):
+    if i > 0:
+        print(item, li[i-1])
+    
+
 
 #max_data = []
 #flag = False
