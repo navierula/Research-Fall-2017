@@ -48,28 +48,15 @@ for item in df.index:
 data = []
 for i, j in zip(time, load):
     data.append((i,j))
-    
+
+# apply algorithm for finding maxima in data    
 max_data = []
 for idx, item in enumerate(data):
     if idx > 0:
-        # next_item, prev_item
-        print(item[1], data[idx-1])
+        prev = data[idx-1][1]
+        curr = item[1]
+        if prev > curr:
+            max_data.append(item + ("max",))
+        else:
+            max_data.append(item + ("",))
     
-    
-li = range(10)
-
-for i, item in enumerate(li):
-    if i > 0:
-        print(item, li[i-1])
-    
-
-
-#max_data = []
-#flag = False
-#for item in data:
-#    
-#    
-#    
-#    new.append(item + (,))
-#print(new)
-
