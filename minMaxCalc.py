@@ -62,6 +62,7 @@ for idx, item in enumerate(data):
 # apply algorithm for finding minima in data    
 min_data = []
 for idx, item in enumerate(max_data):
+    # idx > 0
     prev = max_data[idx-1][1]
     curr = item[1]
     if prev < curr:
@@ -76,17 +77,28 @@ max_count = 0
 for item in all_data:
     if item[2] == "max":
         max_count += 1 
-print(max_count)
+#print(max_count)
 
 # count minima number
 min_count = 0
 for item in all_data:
     if item[3] == "min":
         min_count += 1 
-print(min_count)
+#print(min_count)
+
+##############################################################################
     
 # create db model
 db = []
 
 # create cache store
 cache = []
+
+for idx, item in enumerate(data):
+    if idx > 0:
+        prev = data[idx-1][1]
+        curr = item[1]
+        if prev > curr:
+            cache.append(data[idx-1] + ("max",))
+        else:
+            cache.append(data[idx-1] + ("min",))
