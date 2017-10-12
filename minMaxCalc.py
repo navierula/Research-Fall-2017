@@ -101,4 +101,29 @@ for idx, item in enumerate(data):
         if prev > curr:
             cache.append(data[idx-1] + ("max",))
         else:
-            cache.append(data[idx-1] + ("min",))
+            cache.append(data[idx-1] + ("",))
+            
+            
+"""
+db 
+_______
+10
+
+cache 
+_______
+10
+
+info1
+10 
+5
+2
+40
+
+info2
+2
+5
+10
+40
+
+
+"""
