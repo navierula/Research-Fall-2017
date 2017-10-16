@@ -6,18 +6,6 @@ An implementation of calculating local minima and maxima on a smaller example!
 trial_lst = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112,
              108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
 
-
-
-#cache = []
-#cache.append((trial_lst[0], "first"))
-#for idx, item in enumerate(trial_lst):
-#    if idx > 0:
-#        prev = trial_lst[idx-1]
-#        curr = item
-#        if prev > curr:
-#            cache.append((curr, "max"))
-#        else:
-#            cache.append((curr, ""))
     
 trial_lst = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112, 108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
 indices = [x[0] for x in enumerate(map(lambda x:x<1, trial_lst)) if x[1]]
