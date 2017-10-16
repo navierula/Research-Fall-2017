@@ -49,42 +49,6 @@ data = []
 for i, j in zip(time, load):
     data.append((i,j))
 
-# apply algorithm for finding maxima in data    
-max_data = []
-for idx, item in enumerate(data):
-    prev = data[idx-1][1]
-    curr = item[1]
-    if prev > curr:
-        max_data.append(item + ("max",))
-    else:
-        max_data.append(item + ("",))
-            
-# apply algorithm for finding minima in data    
-min_data = []
-for idx, item in enumerate(max_data):
-    # idx > 0
-    prev = max_data[idx-1][1]
-    curr = item[1]
-    if prev < curr:
-        min_data.append(item + ("min",))
-    else:
-        min_data.append(item + ("",))
-
-all_data = min_data
-
-# count maxima number
-max_count = 0
-for item in all_data:
-    if item[2] == "max":
-        max_count += 1 
-#print(max_count)
-
-# count minima number
-min_count = 0
-for item in all_data:
-    if item[3] == "min":
-        min_count += 1 
-#print(min_count)
 
 ##############################################################################
     
@@ -94,27 +58,23 @@ db = []
 # create cache store
 cache = []
 
-for idx, item in enumerate(data):
-    if idx > 0:
-        prev = data[idx-1][1]
-        curr = item[1]
-        if prev > curr:
-            cache.append(data[idx-1] + ("max",))
-        else:
-            cache.append(data[idx-1] + ("",))
-            
-            
-trial_lst = load
-
-trial_lst.sort(key=int)
+load.sort(key=int)
 
 totals = []
 
-for count, items in enumerate(trial_lst):
+for count, items in enumerate(load):
 
     counter = count + 1
-    last_object = (counter, trial_lst[count], trial_lst[(len(trial_lst)-1) - count])
+    last_object = (counter, load[count], load[(len(load)-1) - count])
 
     totals.append(last_object)
     
-print(totals[:48])
+print(totals[:50])
+
+with open("cycleStartEnd.txt", "w") as fp:
+    for item in totals[:47]:
+        fp.write("Cycle: %s" % item[0] + "\n")
+        fp.write("Starting force: %s" % item[1] + "\n")
+        fp.write("Ending force: %s" % item[2] + "\n\n")
+        
+    

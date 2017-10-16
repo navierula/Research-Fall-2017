@@ -1,0 +1,188 @@
+Cycle: 1
+Starting force: 0.06729
+Ending force: 133.00192
+
+Cycle: 2
+Starting force: 0.07128
+Ending force: 133.13311
+
+Cycle: 3
+Starting force: 0.05453
+Ending force: 133.22797
+
+Cycle: 4
+Starting force: 0.00621
+Ending force: 133.31024
+
+Cycle: 5
+Starting force: 0.00352
+Ending force: 133.37301
+
+Cycle: 6
+Starting force: 0.02063
+Ending force: 133.44473
+
+Cycle: 7
+Starting force: -0.00168
+Ending force: 133.41463
+
+Cycle: 8
+Starting force: -0.01183
+Ending force: 133.39946
+
+Cycle: 9
+Starting force: -0.00167
+Ending force: 133.37028
+
+Cycle: 10
+Starting force: -0.00656
+Ending force: 133.24238
+
+Cycle: 11
+Starting force: -0.02108
+Ending force: 133.11946
+
+Cycle: 12
+Starting force: -0.03623
+Ending force: 133.03752
+
+Cycle: 13
+Starting force: -0.02316
+Ending force: 133.15976
+
+Cycle: 14
+Starting force: -0.05095
+Ending force: 133.28828
+
+Cycle: 15
+Starting force: -0.07705
+Ending force: 133.33659
+
+Cycle: 16
+Starting force: -0.05499
+Ending force: 133.44514
+
+Cycle: 17
+Starting force: -0.04504
+Ending force: 133.47596
+
+Cycle: 18
+Starting force: -0.06794
+Ending force: 133.47915
+
+Cycle: 19
+Starting force: -0.10153
+Ending force: 133.49737
+
+Cycle: 20
+Starting force: -0.05887
+Ending force: 133.39067
+
+Cycle: 21
+Starting force: -0.06541
+Ending force: 133.30764
+
+Cycle: 22
+Starting force: -0.07291
+Ending force: 133.06881
+
+Cycle: 23
+Starting force: -0.03818
+Ending force: 133.07159
+
+Cycle: 24
+Starting force: -0.04398
+Ending force: 133.03778
+
+Cycle: 25
+Starting force: 0.00392
+Ending force: 133.09166
+
+Cycle: 26
+Starting force: -0.02976
+Ending force: 133.04554
+
+Cycle: 27
+Starting force: 0.01042
+Ending force: 133.0445
+
+Cycle: 28
+Starting force: 0.02127
+Ending force: 133.07923
+
+Cycle: 29
+Starting force: -0.01094
+Ending force: 133.28433
+
+Cycle: 30
+Starting force: 0.00993
+Ending force: 133.34818
+
+Cycle: 31
+Starting force: 0.02661
+Ending force: 133.5142
+
+Cycle: 32
+Starting force: 0.07505
+Ending force: 133.5433
+
+Cycle: 33
+Starting force: 0.04052
+Ending force: 133.59119
+
+Cycle: 34
+Starting force: 0.07159
+Ending force: 133.59475
+
+Cycle: 35
+Starting force: 0.06995
+Ending force: 133.51442
+
+Cycle: 36
+Starting force: 0.06751
+Ending force: 133.46002
+
+Cycle: 37
+Starting force: 0.08077
+Ending force: 133.23256
+
+Cycle: 38
+Starting force: 0.10659
+Ending force: 132.11742
+
+Cycle: 39
+Starting force: 0.14511
+Ending force: 132.11589
+
+Cycle: 40
+Starting force: 0.13146
+Ending force: 132.14491
+
+Cycle: 41
+Starting force: 0.13318
+Ending force: 132.0661
+
+Cycle: 42
+Starting force: 0.13957
+Ending force: 132.0855
+
+Cycle: 43
+Starting force: 0.15228
+Ending force: 132.10325
+
+Cycle: 44
+Starting force: 0.15482
+Ending force: 132.16636
+
+Cycle: 45
+Starting force: 0.16059
+Ending force: 132.18176
+
+Cycle: 46
+Starting force: 0.22012
+Ending force: 132.13691
+
+Cycle: 47
+Starting force: 0.19745
+Ending force: 132.05296
+
