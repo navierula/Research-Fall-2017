@@ -72,16 +72,25 @@ for count, items in enumerate(load):
 our_totals = totals[:47]
 #print(our_totals)
 
-combine_data = []
+# append max and min label to relevant rows
+combined_data = []
 for i in data:
     for j in our_totals:
         if i[1] == j[1]:
-            combine_data.append(i + ("min",))
+            combined_data.append(i + ("min",))
         if i[1] == j[2]:
-            combine_data.append(i + ("max",))
+            combined_data.append(i + ("max",))
         else:
-            combine_data.append(i)
-print(combine_data)
+            combined_data.append(i)
+
+# try with smaller example before moving on!!
+
+cooling_time = 0
+heating_time = 0
+for item in combined_data:
+    if item[2] == "min":
+
+
             
     
 
