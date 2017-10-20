@@ -70,12 +70,18 @@ for count, items in enumerate(load):
     totals.append(last_object)
     
 our_totals = totals[:47]
-print(our_totals)
+#print(our_totals)
 
 combine_data = []
 for i in data:
     for j in our_totals:
         if i[1] == j[1]:
+            combine_data.append(i + ("min",))
+        if i[1] == j[2]:
+            combine_data.append(i + ("max",))
+        else:
+            combine_data.append(i)
+print(combine_data)
             
     
 
