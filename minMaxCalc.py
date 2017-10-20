@@ -58,7 +58,7 @@ db = []
 # create cache store
 cache = []
 
-load.sort(key=int)
+load.sort(key=float) # previously key = int
 
 totals = []
 
@@ -69,7 +69,16 @@ for count, items in enumerate(load):
 
     totals.append(last_object)
     
-print(totals[:50])
+our_totals = totals[:47]
+print(our_totals)
+
+combine_data = []
+for i in data:
+    for j in our_totals:
+        if i[1] == j[1]:
+            
+    
+
 
 with open("cycleStartEnd.txt", "w") as fp:
     for item in totals[:47]:
