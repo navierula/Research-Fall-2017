@@ -32,7 +32,7 @@ for i in range(len(data_)):
             combine_data.append((data_[i], "max"))
             flag = 1
     if flag == 0:
-        combine_data.append((data_[i],)) 
+        combine_data.append((data_[i],"NA")) 
            
 data_two = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112,
              108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
@@ -41,7 +41,26 @@ count = 0
 data_with_time = []
 for item in combine_data:
     count += 1
-    data_with_time.append((count, item))
+    data_with_time.append((count,) +item)
 
+
+min_sums = []
+max_sums = []
+for x, _, what in data_with_time:
+    if what != 'NA':
+        current = min_sums if what == 'min' else max_sums
+        current.append(0)
+    current[-1] += x
+
+    
+    
+    
+
+        
+        
+        
+    
+    
+    
     
      
