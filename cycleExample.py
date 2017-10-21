@@ -31,8 +31,17 @@ for i in range(len(data_)):
         if data_[i] == j[1]:
             combine_data.append((data_[i], "max"))
             flag = 1
-    if(flag == 0):
+    if flag == 0:
         combine_data.append((data_[i],)) 
            
-print(combine_data)
-            
+data_two = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112,
+             108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
+
+count = 0
+data_with_time = []
+for item in combine_data:
+    count += 1
+    data_with_time.append((count, item))
+
+    
+     
