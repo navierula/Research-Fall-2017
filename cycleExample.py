@@ -49,10 +49,11 @@ max_sums = []
 
 for x, _, what in data_with_time:
     if what != 'NA':
-        print("what is", what)
         current = min_sums if what == 'min' else max_sums
         current.append(0)
     current[-1] += x
+    
+
     
 
     
