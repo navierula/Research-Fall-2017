@@ -73,32 +73,47 @@ our_totals = totals[:47]
 #print(our_totals)
 
 # append max and min label to relevant rows
-combined_data = []
+combine_data = []
 for i in data:
+    flag = 0
     for j in our_totals:
         if i[1] == j[1]:
-            combined_data.append(i + ("min",))
+            combine_data.append(i + ("min",))
+            flag = 1
         if i[1] == j[2]:
-            combined_data.append(i + ("max",))
-        else:
-            combined_data.append(i)
+            combine_data.append(i + ("max",))
+            flag = 1
+    if flag == 0:
+        combine_data.append(i + ("NA",))
+        
+min_sums = []
+max_sums = []
+for x, _, what in combine_data:
+    if what != 'NA':
+        current = min_sums if what == 'min' else max_sums
+        current.append(0)
+    current[-1] += x
 
 # try with smaller example before moving on!!
 
-cooling_time = 0
-heating_time = 0
-for item in combined_data:
-    if item[2] == "min":
-
-
-            
+#cooling_time = 0
+#heating_time = 0
+#for item in combined_data:
+#    if item[2] == "min":
+#
+#
+#            
+#    
+#
+#
+#with open("cycleStartEnd.txt", "w") as fp:
+#    for item in totals[:47]:
+#        fp.write("Cycle: %s" % item[0] + "\n")
+#        fp.write("Starting force: %s" % item[1] + "\n")
+#        fp.write("Ending force: %s" % item[2] + "\n\n")
+#        fp.write("Cooling time: %s" % j + "\n")
+#        fp.write("Heating time: %s" % i + "\n")
+        
     
-
-
-with open("cycleStartEnd.txt", "w") as fp:
-    for item in totals[:47]:
-        fp.write("Cycle: %s" % item[0] + "\n")
-        fp.write("Starting force: %s" % item[1] + "\n")
-        fp.write("Ending force: %s" % item[2] + "\n\n")
         
     

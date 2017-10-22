@@ -46,15 +46,51 @@ for item in combine_data:
 
 min_sums = []
 max_sums = []
+
 for x, _, what in data_with_time:
     if what != 'NA':
+        print("what is", what)
         current = min_sums if what == 'min' else max_sums
         current.append(0)
     current[-1] += x
+    
 
     
     
-    
+#def partition_items(items):
+#    lists = {
+#        'min': [],
+#        'max': [],
+#    }
+#    vals_list_max = []
+#    vals_list_min = []
+#    current_kind = None
+#    current_list = None
+#    for value, _, kind in items:
+#        if kind != current_kind and kind != 'NA':
+#            vals_list_max.append(value)
+#           # print(vals_list_max)
+#           # print(kind)
+#            current_kind = kind
+#           # print(current_kind)
+#            # You'll get a error here if current_kind isn't one of 'min'
+#            # or 'max'.
+#            current_list = lists[current_kind]
+#            #print(current_list)
+#            current_list.append(0)
+#            #print(current_list)
+#        # You'll get an error here if the first item in the list doesn't
+#        # have type of 'min' or 'max'.
+#        current_list[-1] += value
+#        print(current_list)
+# 
+#    return lists
+#
+#
+#lists = partition_items(data_with_time)
+#print(lists['min'])
+## -> [15, 50, 115]
+#print(lists['max'])
 
         
         
