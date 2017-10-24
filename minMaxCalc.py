@@ -48,59 +48,95 @@ for item in df.index:
 data = []
 for i, j in zip(time, load):
     data.append((i,j))
+    
+trial_lst = load
 
+
+indices = [x[0] for x in enumerate(map(lambda x:x<1, trial_lst)) if x[1]]
+
+sublists = [trial_lst[i:j] for i,j in list(zip([0]+indices, indices+[None]))[1:]]
+
+count = 0
+for i,l in enumerate(sublists):
+    if count < 50:
+        print(i, max((v,i) for (i,v) in enumerate(l)), min((v,i) for (i,v) in enumerate(l)))
+        count += 1
 
 ##############################################################################
     
-# create db model
-db = []
-
-# create cache store
-cache = []
-
-load.sort(key=float) # previously key = int
-
-totals = []
-
-for count, items in enumerate(load):
-
-    counter = count + 1
-    last_object = (counter, load[count], load[(len(load)-1) - count])
-
-    totals.append(last_object)
-    
-our_totals = totals[:47]
-#print(our_totals)
-
-# append max and min label to relevant rows
-combine_data = []
-for i in data:
-    flag = 0
-    for j in our_totals:
-        if i[1] == j[1]:
-            combine_data.append(i + ("min",))
-            flag = 1
-        if i[1] == j[2]:
-            combine_data.append(i + ("max",))
-            flag = 1
-    if flag == 0:
-        combine_data.append(i + ("NA",))
-        
-min_sums = []
-max_sums = []
-for x, _, what in combine_data:
-    if what != 'NA':
-        current = min_sums if what == 'min' else max_sums
-        current.append(0)
-    current[-1] += x
-
-# try with smaller example before moving on!!
-
-#cooling_time = 0
-#heating_time = 0
-#for item in combined_data:
-#    if item[2] == "min":
+## create db model
+#db = []
 #
+## create cache store
+#cache = []
+#
+#load.sort(key=float) # previously key = int
+#
+#totals = []
+#
+#for count, items in enumerate(load):
+#
+#    counter = count + 1
+#    last_object = (counter, load[count], load[(len(load)-1) - count])
+#
+#    totals.append(last_object)
+#    
+#our_totals = totals[:47]
+#print(our_totals)
+#
+## append max and min label to relevant rows
+#combine_data = []
+#for i in data:
+#    flag = 0
+#    for j in our_totals:
+#        if i[1] == j[1]:
+#            combine_data.append(i + ("min",))
+#            flag = 1
+#        if i[1] == j[2]:
+#            combine_data.append(i + ("max",))
+#            flag = 1
+#    if flag == 0:
+#        combine_data.append(i + ("NA",))
+#        
+#all_experiment_data = []
+#current_experiment_data = []
+#for item in combine_data:
+#    index, _, point_type = item
+#    if point_type=="min" and current_experiment_data: #Starting a new experiment, flush the old one
+#        all_experiment_data.append(current_experiment_data)
+#        current_experiment_data = []
+#    current_experiment_data.append(index)
+#
+##Flush the last experiment
+#all_experiment_data.append(current_experiment_data)
+#
+## for item in all_experiment_data:
+##     print(item)
+#
+#
+#
+#final = []
+#for item in all_experiment_data:
+#    final.append(item[-1]-item[0])
+#    
+#        
+## min_sums = []
+## max_sums = []
+## for x, _, what in combine_data:
+##     if what != 'NA':
+##         current = min_sums if what == 'min' else max_sums
+##         current.append(0)
+##     current[-1] += x
+#    
+#
+#
+## try with smaller example before moving on!!
+#
+##cooling_time = 0
+##heating_time = 0
+##for item in combined_data:
+##    if item[2] == "min":
+##
 #
 #            
 #    

@@ -53,7 +53,24 @@ for x, _, what in data_with_time:
         current.append(0)
     current[-1] += x
     
+#############################
 
+it = iter(data_with_time)
+
+out = []
+ap = [next(it)[0]]
+for e,_,state in it:
+    if state == 'min':
+        out.append(ap)
+        ap = []
+    ap += [e]
+out.append(ap)
+
+final_times = []
+for item in out:
+    final_times.append(item[-1]-item[0])
+print(final_times)
+    
     
 
     
