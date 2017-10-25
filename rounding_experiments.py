@@ -53,6 +53,7 @@ for t in get_groups(round_zero):
     
 gen = get_groups(round_zero)
 
-
+max_values = []
 for i, (t1, t2) in enumerate(zip(gen, gen), 1):
-    print(i, t1[0], t2)
+    max_values.append((t1[1], t1[2]))
+    #print(i, t1, t2)
