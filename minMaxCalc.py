@@ -49,18 +49,40 @@ data = []
 for i, j in zip(time, load):
     data.append((i,j))
     
-trial_lst = load
+lst = load
+
+def get_groups(lst):
+    up = False
+    for i, (u, v) in enumerate(zip(lst, lst[1:])):
+        if up:
+            if v < u:
+                yield 'End', i, u
+                up = False
+        else:
+            if v > u:
+                yield 'Start', i, u
+                up = True
+    if up:
+        yield 'End', i + 1, lst[-1]
 
 
-indices = [x[0] for x in enumerate(map(lambda x:x<1, trial_lst)) if x[1]]
+gen = get_groups(lst)
+for i, (t1, t2) in enumerate(zip(gen, gen), 1):
+    print(i, t1, t2)
+    
 
-sublists = [trial_lst[i:j] for i,j in list(zip([0]+indices, indices+[None]))[1:]]
 
-count = 0
-for i,l in enumerate(sublists):
-    if count < 50:
-        print(i, max((v,i) for (i,v) in enumerate(l)), min((v,i) for (i,v) in enumerate(l)))
-        count += 1
+
+
+#indices = [x[0] for x in enumerate(map(lambda x:x<1, trial_lst)) if x[1]]
+#
+#sublists = [trial_lst[i:j] for i,j in list(zip([0]+indices, indices+[None]))[1:]]
+#
+#count = 0
+#for i,l in enumerate(sublists):
+#    if count < 50:
+#        print(i, max((v,i) for (i,v) in enumerate(l)), min((v,i) for (i,v) in enumerate(l)))
+#        count += 1
 
 ##############################################################################
     
