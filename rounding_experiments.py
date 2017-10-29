@@ -55,8 +55,37 @@ gen = get_groups(round_zero)
 
 mins = []
 maxes = []
+max_ = []
 for i, (t1, t2) in enumerate(zip(gen, gen), 1):
-    mins.append((t1[1],t1[2]))
+    mins.append((i, t1[1],t1[2]))
     maxes.append((t2[1],t2[2]))
+    max_.append(t2[2])
     
 # append max values to list and see if they correspond to actual MAX values!!
+pointss = []
+for t in get_groups(maxes):
+    pointss.append(t)
+    
+# define generator function to determine start 
+# and end points for min and max values
+def get_groups(lst):
+    up = False
+    for i, (u, v) in enumerate(zip(lst, lst[1:])):
+        if up:
+            if v[1] < u[1]:
+                yield 'End', i, u[1], u[0]
+                up = False
+        else:
+            if v[1] > u[1]:
+                yield 'Start', i, u[1], u[0]
+                up = True
+    if up:
+        yield 'End', i + 1, lst[-1]
+        
+gen = get_groups(maxes)
+
+mins = []
+maxes = []
+max_ = []
+for i, (t1, t2) in enumerate(zip(gen, gen), 1):
+    print(i, t1,t2)
