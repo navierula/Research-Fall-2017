@@ -94,6 +94,12 @@ for i, (t1, t2) in enumerate(zip(gen, gen), 1):
 # 2) total time for each cycle
 # 3) total heating time for each cycle
 # 4) total cooling time for each cycle
+    
+combine_data = []
+for i in range(len(round_zero)):
+    for j in final_min_max:
+        print(j[0][0])
+    
 
 #combine_data = []
 #for i in range(len(data_)):
