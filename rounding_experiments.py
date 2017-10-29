@@ -53,9 +53,10 @@ for t in get_groups(round_zero):
 # assign result get_groups to variable
 gen = get_groups(round_zero)
 
-
+mins = []
+maxes = []
 for i, (t1, t2) in enumerate(zip(gen, gen), 1):
-    print(i, t1, t2)
-    #print(i, t1, t2)
+    mins.append((t1[1],t1[2]))
+    maxes.append((t2[1],t2[2]))
     
 # append max values to list and see if they correspond to actual MAX values!!
