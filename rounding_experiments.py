@@ -73,11 +73,11 @@ def get_groups(lst):
     for i, (u, v) in enumerate(zip(lst, lst[1:])):
         if up:
             if v[1] < u[1]:
-                yield 'End', i, u[1], u[0]
+                yield 'End', i, u[0], u[1]
                 up = False
         else:
             if v[1] > u[1]:
-                yield 'Start', i, u[1], u[0]
+                yield 'Start', i, u[0], u[1]
                 up = True
     if up:
         yield 'End', i + 1, lst[-1]
@@ -87,5 +87,8 @@ gen = get_groups(maxes)
 mins = []
 maxes = []
 max_ = []
+count = 0
 for i, (t1, t2) in enumerate(zip(gen, gen), 1):
-    print(i, t1,t2)
+    count += 1
+    print(t1,t2)
+print(count)
