@@ -28,7 +28,9 @@ for item in df.index:
 round_one = []
 for item in df.index:
     round_one.append(df["Round_One"][item])
-    
+ 
+# define generator function to determine start 
+# and end points for min and max values
 def get_groups(lst):
     up = False
     for i, (u, v) in enumerate(zip(lst, lst[1:])):
@@ -43,17 +45,17 @@ def get_groups(lst):
     if up:
         yield 'End', i + 1, lst[-1]
 
-count = 0
-new = []
+# append all returned values to a list
+points = []
 for t in get_groups(round_zero):
-    new.append(t)
-    if count <= 5:
-        print(t)
-        count += 1
-    
+    points.append(t)
+  
+# assign result get_groups to variable
 gen = get_groups(round_zero)
 
-max_values = []
+
 for i, (t1, t2) in enumerate(zip(gen, gen), 1):
-    max_values.append((t1[1], t1[2]))
+    print(i, t1, t2)
     #print(i, t1, t2)
+    
+# append max values to list and see if they correspond to actual MAX values!!
