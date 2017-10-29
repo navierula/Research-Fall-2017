@@ -84,11 +84,26 @@ def get_groups(lst):
         
 gen = get_groups(maxes)
 
-mins = []
-maxes = []
-max_ = []
-count = 0
+final_min_max = []
 for i, (t1, t2) in enumerate(zip(gen, gen), 1):
-    count += 1
-    print(t1,t2)
-print(count)
+    final_min_max.append((t1,t2))
+
+# proceed with next steps
+
+# 1) combine data
+# 2) total time for each cycle
+# 3) total heating time for each cycle
+# 4) total cooling time for each cycle
+
+#combine_data = []
+#for i in range(len(data_)):
+#    flag = 0
+#    for j in totals:
+#        if data_[i] == j[0]:
+#            combine_data.append((data_[i], "min"))
+#            flag = 1
+#        if data_[i] == j[1]:
+#            combine_data.append((data_[i], "max"))
+#            flag = 1
+#    if flag == 0:
+#        combine_data.append((data_[i],"NA")) 
