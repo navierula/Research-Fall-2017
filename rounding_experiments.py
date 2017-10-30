@@ -20,6 +20,11 @@ xl = pd.ExcelFile("data/130N_Cycles_1-47.xlsx")
 df = xl.parse("Specimen_RawData_1")
 
 # append data from round zero column to list
+load = []
+for item in df.index:
+    load.append(df["Load"][item])
+
+# append data from round zero column to list
 round_zero = []
 for item in df.index:
     round_zero.append(df["Round_Zero"][item])
@@ -94,12 +99,26 @@ for i, (t1, t2) in enumerate(zip(gen, gen), 1):
 # 2) total time for each cycle
 # 3) total heating time for each cycle
 # 4) total cooling time for each cycle
-    
+
+# combine data only with min and max labels,
+# THEN, append time    
 combine_data = []
-for i in range(len(round_zero)):
+for i in range(len(load)):
+    flag = 0
     for j in final_min_max:
-        print(j[0][0])
+        if i == j[0][2]:
+            combine_data.append((load[i], "min"))
+            flag = 1
+        if i == j[1][2]:
+            combine_data.append((load[i], "max"))
+            flag = 1
+    if flag == 0:
+        combine_data.append((load[i], "NA"))
     
+count = 0
+for item in combine_data:
+    if item[1] == "min":
+        count +=1
 
 #combine_data = []
 #for i in range(len(data_)):
