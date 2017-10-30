@@ -19,7 +19,12 @@ import pandas as pd
 xl = pd.ExcelFile("data/130N_Cycles_1-47.xlsx")
 df = xl.parse("Specimen_RawData_1")
 
-# append data from round zero column to list
+# append data from time column to list
+time = []
+for item in df.index:
+    time.append(df["Time"][item])
+
+# append data from load column to list
 load = []
 for item in df.index:
     load.append(df["Load"][item])
@@ -116,6 +121,9 @@ for i in range(len(load)):
         combine_data.append((load[i], "NA"))
     
 # combine data with time
-
+data_with_time = []
+for i, j in zip(time, combine_data):
+    data_with_time.append((i,) +j)
+    
 
 
