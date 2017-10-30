@@ -115,20 +115,7 @@ for i in range(len(load)):
     if flag == 0:
         combine_data.append((load[i], "NA"))
     
-count = 0
-for item in combine_data:
-    if item[1] == "min":
-        count +=1
+# combine data with time
 
-#combine_data = []
-#for i in range(len(data_)):
-#    flag = 0
-#    for j in totals:
-#        if data_[i] == j[0]:
-#            combine_data.append((data_[i], "min"))
-#            flag = 1
-#        if data_[i] == j[1]:
-#            combine_data.append((data_[i], "max"))
-#            flag = 1
-#    if flag == 0:
-#        combine_data.append((data_[i],"NA")) 
+
+
