@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+h#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 An implementation of calculating local minima and maxima on a smaller example!

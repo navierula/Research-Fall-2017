@@ -125,5 +125,41 @@ data_with_time = []
 for i, j in zip(time, combine_data):
     data_with_time.append((i,) +j)
     
+# calculate time for each cycle
+it = iter(data_with_time)
 
+out = []
+ap = [next(it)[0]]
+for e,_,state in it:
+    if state == 'min':
+        out.append(ap)
+        ap = []
+    ap += [e]
+out.append(ap)
+
+final_times = []
+for item in out:
+    final_times.append(item[-1]-item[0])
+    
+#########################
+    
+lst = data_with_time
+
+low_lst = []
+high_lst = []
+
+STATE = None
+state_dict = {'min': low_lst, 'max': high_lst}
+
+for x, y, z in lst:
+    if z=='min' or z=='max':
+        STATE = z
+        sublist = []
+        state_dict[STATE].append(sublist)
+        sublist.append(x)
+    if STATE and z=='NA':
+        sublist.append(x)
+
+###############################################
+    
 

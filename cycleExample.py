@@ -70,8 +70,57 @@ final_times = []
 for item in out:
     final_times.append(item[-1]-item[0])
 print(final_times)
+
+########################################
+
+lst = data_with_time
+
+low_lst = []
+high_lst = []
+
+STATE = None
+state_dict = {'low': low_lst, 'high': high_lst}
+
+for x, y, z in lst:
+    if z=='low' or z=='high':
+        STATE = z
+        sublist = []
+        state_dict[STATE].append(sublist)
+        sublist.append(x)
+    if STATE and z=='NA':
+        sublist.append(x)
+
+
     
-    
+#[(1, 'x', 'NA'),
+# (2, 'x', 'low'),
+# (3, 'x', 'NA'),
+# (4, 'x', 'NA'),
+# (5, 'x', 'NA'),
+# (6, 'x', 'high'),
+# (7, 'x', 'NA'),
+# (8, 'x', 'NA'),
+# (9, 'x', 'NA'),
+# (10, 'x', 'NA'),
+# (11, 'x', 'low'),
+# (12, 'x', 'NA'),
+# (13, 'x', 'NA'),
+# (14, 'x', 'NA'),
+# (15, 'x', 'high'),
+# (16, 'x', 'NA'),
+# (17, 'x', 'NA'),
+# (18, 'x', 'NA'),
+# (19, 'x', 'NA'),
+# (20, 'x', 'NA'),
+# (21, 'x', 'low'),
+# (22, 'x', 'NA'),
+# (23, 'x', 'NA'),
+# (24, 'x', 'NA'),
+# (25, 'x', 'high'),
+# (26, 'x', 'NA')]    
+#
+#min_lst = [[2,3,4,5],[11,12,13,14], [21,22,23,24]]
+#max_lst = [[6,7,8,9,10],[15,16,17,18,19,20], [25,26]]
 
     
     
