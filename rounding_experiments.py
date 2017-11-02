@@ -172,9 +172,9 @@ for x, y, z in lst:
 
 ###############################################
     
-    
 data_ = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112,
              108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
+
 
 # heating time
 low_res = []
@@ -214,8 +214,18 @@ with open("final.txt", "w") as fp:
         fp.write("Cooling time per cycle: %s" % str(item[4]) + "\n")
         fp.write("Heating time per cycle: %s" % str(item[5]) + "\n\n")
         
-    
-    
+import csv
+
+data= final
+
+with open('final.csv','w') as out:
+    csv_out=csv.writer(out)
+    csv_out.writerow(['cycle', 'local_min', 'local_max', 'total_time', 'cooling_time', 'heating_time'])
+    for row in data:
+        csv_out.writerow(row)  
+ 
+# put data into a .csv (table)
+        
 
     
 #with open("final.txt", "w") as fp:
@@ -226,3 +236,19 @@ with open("final.txt", "w") as fp:
 #        fp.write("Cooling time: %s" % j + "\n")
 #        fp.write("Heating time: %s" % i + "\n")
         
+
+# 47 runs, and predict 3 cycles based on past data [48, 49. 50]
+# Naive Bayes - can it give us a prediction of one point at a time,
+# or a number of points?
+        
+# I'm not sure if we need extra point to predict data
+# Predict next point based on first predicted point
+# ----------------------------------------------------
+# Use black to predict three points
+        
+# try and predict force and time for each point
+
+# ignore min max, and let it predict the next point...let's see.
+
+        
+            
