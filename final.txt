@@ -1,0 +1,329 @@
+Cycle: 1
+Minimum value: 0.51372
+Maximum value: 132.54321
+Total time per cycle: 242.29998
+Cooling time per cycle: 161.29998
+Heating time per cycle: 80.9
+
+Cycle: 2
+Minimum value: 0.50146
+Maximum value: 132.57836
+Total time per cycle: 334.6
+Cooling time per cycle: 262.80003
+Heating time per cycle: 71.7
+
+Cycle: 3
+Minimum value: 0.50416
+Maximum value: 131.58451
+Total time per cycle: 289.2
+Cooling time per cycle: 235.8
+Heating time per cycle: 53.29994
+
+Cycle: 4
+Minimum value: 1.50691
+Maximum value: 131.54046
+Total time per cycle: 344.39994
+Cooling time per cycle: 249.29988
+Heating time per cycle: 95.0
+
+Cycle: 5
+Minimum value: 0.50848
+Maximum value: 133.5142
+Total time per cycle: 322.99988
+Cooling time per cycle: 250.69988
+Heating time per cycle: 72.2
+
+Cycle: 6
+Minimum value: 0.50238
+Maximum value: 132.6618
+Total time per cycle: 323.2
+Cooling time per cycle: 251.2
+Heating time per cycle: 71.89988
+
+Cycle: 7
+Minimum value: 0.52059
+Maximum value: 132.69964
+Total time per cycle: 313.00012
+Cooling time per cycle: 252.90012
+Heating time per cycle: 60.0
+
+Cycle: 8
+Minimum value: 0.5009
+Maximum value: 132.63109
+Total time per cycle: 311.3
+Cooling time per cycle: 260.8
+Heating time per cycle: 50.4
+
+Cycle: 9
+Minimum value: 0.52352
+Maximum value: 131.53477
+Total time per cycle: 274.0
+Cooling time per cycle: 224.0
+Heating time per cycle: 49.9
+
+Cycle: 10
+Minimum value: 0.50309
+Maximum value: 131.55767
+Total time per cycle: 291.3
+Cooling time per cycle: 222.3
+Heating time per cycle: 68.9
+
+Cycle: 11
+Minimum value: 0.52487
+Maximum value: 131.57019
+Total time per cycle: 292.60025
+Cooling time per cycle: 222.80025
+Heating time per cycle: 69.70025
+
+Cycle: 12
+Minimum value: 0.53089
+Maximum value: 132.52823
+Total time per cycle: 297.59975
+Cooling time per cycle: 226.0
+Heating time per cycle: 71.5
+
+Cycle: 13
+Minimum value: 0.50404
+Maximum value: 131.56165
+Total time per cycle: 280.0
+Cooling time per cycle: 208.5
+Heating time per cycle: 71.39975
+
+Cycle: 14
+Minimum value: 1.51977
+Maximum value: 131.67785
+Total time per cycle: 308.20025
+Cooling time per cycle: 217.8
+Heating time per cycle: 90.3
+
+Cycle: 15
+Minimum value: 0.52461
+Maximum value: 131.58631
+Total time per cycle: 293.5995
+Cooling time per cycle: 220.5995
+Heating time per cycle: 72.9
+
+Cycle: 16
+Minimum value: 0.50027
+Maximum value: 131.61126
+Total time per cycle: 296.7
+Cooling time per cycle: 223.5
+Heating time per cycle: 73.1
+
+Cycle: 17
+Minimum value: 0.50253
+Maximum value: 130.64782
+Total time per cycle: 295.4
+Cooling time per cycle: 221.2
+Heating time per cycle: 74.0995
+
+Cycle: 18
+Minimum value: 0.5016
+Maximum value: 131.55186
+Total time per cycle: 300.8
+Cooling time per cycle: 225.4
+Heating time per cycle: 75.3
+
+Cycle: 19
+Minimum value: 0.50355
+Maximum value: 131.64112
+Total time per cycle: 301.1
+Cooling time per cycle: 223.8
+Heating time per cycle: 77.1995
+
+Cycle: 20
+Minimum value: 0.50285
+Maximum value: 130.7148
+Total time per cycle: 278.5
+Cooling time per cycle: 201.5995
+Heating time per cycle: 76.8005
+
+Cycle: 21
+Minimum value: 1.50497
+Maximum value: 131.60804
+Total time per cycle: 339.3995
+Cooling time per cycle: 247.3995
+Heating time per cycle: 91.8995
+
+Cycle: 22
+Minimum value: 0.50203
+Maximum value: 130.68189
+Total time per cycle: 232.3995
+Cooling time per cycle: 173.0
+Heating time per cycle: 59.2995
+
+Cycle: 23
+Minimum value: 4.50012
+Maximum value: 130.50085
+Total time per cycle: 364.5
+Cooling time per cycle: 230.7005
+Heating time per cycle: 133.7
+
+Cycle: 24
+Minimum value: 0.51336
+Maximum value: 131.53273
+Total time per cycle: 310.5
+Cooling time per cycle: 226.9
+Heating time per cycle: 83.5
+
+Cycle: 25
+Minimum value: 0.52311
+Maximum value: 130.55855
+Total time per cycle: 316.3
+Cooling time per cycle: 231.5
+Heating time per cycle: 84.6995
+
+Cycle: 26
+Minimum value: 0.50607
+Maximum value: 131.51486
+Total time per cycle: 328.0
+Cooling time per cycle: 241.3005
+Heating time per cycle: 86.6
+
+Cycle: 27
+Minimum value: 0.52793
+Maximum value: 131.57064
+Total time per cycle: 311.7
+Cooling time per cycle: 220.7
+Heating time per cycle: 90.9
+
+Cycle: 28
+Minimum value: 0.50275
+Maximum value: 131.50829
+Total time per cycle: 300.599
+Cooling time per cycle: 210.699
+Heating time per cycle: 89.7995
+
+Cycle: 29
+Minimum value: 1.51489
+Maximum value: 131.51
+Total time per cycle: 334.899
+Cooling time per cycle: 228.699
+Heating time per cycle: 106.1
+
+Cycle: 30
+Minimum value: 0.50042
+Maximum value: 131.50921
+Total time per cycle: 326.5
+Cooling time per cycle: 228.2
+Heating time per cycle: 98.2
+
+Cycle: 31
+Minimum value: 0.51261
+Maximum value: 130.71489
+Total time per cycle: 323.2
+Cooling time per cycle: 222.0
+Heating time per cycle: 101.1
+
+Cycle: 32
+Minimum value: 1.53942
+Maximum value: 130.54335
+Total time per cycle: 359.301
+Cooling time per cycle: 240.801
+Heating time per cycle: 118.401
+
+Cycle: 33
+Minimum value: 0.51392
+Maximum value: 130.5877
+Total time per cycle: 342.8
+Cooling time per cycle: 232.0
+Heating time per cycle: 110.7
+
+Cycle: 34
+Minimum value: 1.5089
+Maximum value: 131.5352
+Total time per cycle: 400.6
+Cooling time per cycle: 272.3
+Heating time per cycle: 128.199
+
+Cycle: 35
+Minimum value: -0.49218
+Maximum value: 130.50038
+Total time per cycle: 361.301
+Cooling time per cycle: 255.5
+Heating time per cycle: 105.701
+
+Cycle: 36
+Minimum value: 0.51553
+Maximum value: 130.51911
+Total time per cycle: 398.3
+Cooling time per cycle: 271.3
+Heating time per cycle: 126.9
+
+Cycle: 37
+Minimum value: 0.51303
+Maximum value: 130.56107
+Total time per cycle: 422.199
+Cooling time per cycle: 287.5
+Heating time per cycle: 134.6
+
+Cycle: 38
+Minimum value: 0.5018
+Maximum value: 130.53618
+Total time per cycle: 441.0
+Cooling time per cycle: 297.101
+Heating time per cycle: 143.8
+
+Cycle: 39
+Minimum value: 0.5113
+Maximum value: 130.53745
+Total time per cycle: 459.9
+Cooling time per cycle: 309.101
+Heating time per cycle: 150.7
+
+Cycle: 40
+Minimum value: 0.51186
+Maximum value: 129.57251
+Total time per cycle: 466.4
+Cooling time per cycle: 305.7
+Heating time per cycle: 160.599
+
+Cycle: 41
+Minimum value: 0.51316
+Maximum value: 130.57625
+Total time per cycle: 486.099
+Cooling time per cycle: 318.0
+Heating time per cycle: 168.0
+
+Cycle: 42
+Minimum value: 0.50586
+Maximum value: 130.56697
+Total time per cycle: 510.2
+Cooling time per cycle: 335.5
+Heating time per cycle: 174.599
+
+Cycle: 43
+Minimum value: 0.51402
+Maximum value: 130.55333
+Total time per cycle: 477.2
+Cooling time per cycle: 320.2
+Heating time per cycle: 156.9
+
+Cycle: 44
+Minimum value: 1.50876
+Maximum value: 130.53639
+Total time per cycle: 521.201
+Cooling time per cycle: 321.201
+Heating time per cycle: 199.901
+
+Cycle: 45
+Minimum value: 1.50364
+Maximum value: 130.5965
+Total time per cycle: 540.301
+Cooling time per cycle: 333.5
+Heating time per cycle: 206.7
+
+Cycle: 46
+Minimum value: 0.5051
+Maximum value: 130.5785
+Total time per cycle: 562.2
+Cooling time per cycle: 358.8
+Heating time per cycle: 203.299
+
+Cycle: 47
+Minimum value: 0.50993
+Maximum value: 129.5121
+Total time per cycle: 531.501
+Cooling time per cycle: 347.5
+Heating time per cycle: 183.9
+

@@ -141,6 +141,16 @@ final_times = []
 for item in out:
     final_times.append(item[-1]-item[0])
     
+final_times = final_times[1:]
+    
+#########################
+min_lst = []
+max_lst = []
+for item in combine_data:
+    if item[1] == "min":
+        min_lst.append(item[0])
+    if item[1] == "max":
+        max_lst.append(item[0])
 #########################
     
 lst = data_with_time
@@ -162,4 +172,57 @@ for x, y, z in lst:
 
 ###############################################
     
+    
+data_ = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112,
+             108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
 
+# heating time
+low_res = []
+for item in low_lst:
+    low_res.append(item[-1]-item[0])
+    
+high_res = []
+for item in high_lst:
+    high_res.append(item[-1]-item[0])
+    
+###########
+cycles = []
+for i in range(1,48):
+    cycles.append(i)
+##########
+    
+"""
+cycles - list of cycle numbers
+max_lst - maximum value
+min_lst - minimum value
+final_times - total time for each cycle
+high_res - cooling time
+low_res - heating time
+"""
+
+final = []
+for a, b, c, d, e, f in zip(cycles, min_lst, max_lst, final_times, high_res, low_res):
+    final.append((a,b,c,d,e,f))
+
+
+with open("final.txt", "w") as fp:
+    for item in final:
+        fp.write("Cycle: %s" % str(item[0]) + "\n")
+        fp.write("Minimum value: %s" % str(item[1]) + "\n")
+        fp.write("Maximum value: %s" % str(item[2]) + "\n")
+        fp.write("Total time per cycle: %s" % str(item[3]) + "\n")
+        fp.write("Cooling time per cycle: %s" % str(item[4]) + "\n")
+        fp.write("Heating time per cycle: %s" % str(item[5]) + "\n\n")
+        
+    
+    
+
+    
+#with open("final.txt", "w") as fp:
+#    for item in totals[:47]:
+#        fp.write("Cycle: %s" % item[0] + "\n")
+#        fp.write("Starting force: %s" % item[1] + "\n")
+#        fp.write("Ending force: %s" % item[2] + "\n\n")
+#        fp.write("Cooling time: %s" % j + "\n")
+#        fp.write("Heating time: %s" % i + "\n")
+        
