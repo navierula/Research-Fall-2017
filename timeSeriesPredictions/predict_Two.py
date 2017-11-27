@@ -14,7 +14,7 @@ from pandas import DataFrame
 #def parser(x):
 #	return datetime.strptime('190'+x, '%Y-%m')
 
-series = read_csv('data/shampoo-sales.csv', header=0, parse_dates=[0], index_col=0, squeeze=True)
+series = read_csv('data/130N_Cycles_1-47.csv', header=0, parse_dates=[0], index_col=0, squeeze=True)
 series.plot()
 pyplot.show()
 
@@ -49,7 +49,7 @@ for x in test_X:
 #print('Test MSE: %.3f' % test_score)
 
 # plot predictions and expected results
-pyplot.plot(train_y)
-pyplot.plot([None for i in train_y] + [x for x in test_y])
-pyplot.plot([None for i in train_y] + [x for x in predictions])
+pyplot.plot(train_y[:100])
+pyplot.plot([None for i in train_y[:100]] + [x for x in test_y[:100]])
+pyplot.plot([None for i in train_y[:100]] + [x for x in predictions[:100]])
 pyplot.show()
