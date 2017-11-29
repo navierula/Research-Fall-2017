@@ -61,8 +61,8 @@ for t in range(len(test)):
 error = mean_squared_error(test, predictions)
 print('Test MSE: %.3f' % error)
 # plot
-pyplot.plot(test[:50])
-pyplot.plot(predictions[:50], color='green')
+pyplot.plot(test)
+pyplot.plot(predictions, color='green')
 
 pyplot.show()
 
