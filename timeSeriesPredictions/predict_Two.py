@@ -38,8 +38,6 @@ test_X, test_y = test[:,0], test[:,1]
 def model_persistence(x):
 	return x
 
-
-
 # walk-forward validation
 predictions = list()
 for x in test_X:
@@ -49,7 +47,7 @@ for x in test_X:
 #print('Test MSE: %.3f' % test_score)
 
 # plot predictions and expected results
-pyplot.plot(train_y[:100])
-pyplot.plot([None for i in train_y[:100]] + [x for x in test_y[:100]])
-pyplot.plot([None for i in train_y[:100]] + [x for x in predictions[:100]])
+pyplot.plot(train_y)
+pyplot.plot([None for i in train_y] + [x for x in test_y])
+pyplot.plot([None for i in train_y] + [x for x in predictions])
 pyplot.show()
