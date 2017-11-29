@@ -42,6 +42,7 @@ series = Series.from_csv('data/130N_Cycles_1-47.csv', header=0)
 # split dataset
 X = difference(series.values)
 size = int(len(X) * 0.70)
+#size = int(len(X))
 train, test = X[0:size], X[size:]
 
 # train autoregression
@@ -63,6 +64,6 @@ print('Test MSE: %.3f' % error)
 # plot
 pyplot.plot(test)
 pyplot.plot(predictions, color='green')
-
 pyplot.show()
+
 
