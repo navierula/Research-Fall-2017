@@ -38,6 +38,7 @@ test_X, test_y = test[:,0], test[:,1]
 def model_persistence(x):
 	return x
 
+print(test_X)
 # walk-forward validation
 predictions = list()
 for x in test_X:
@@ -50,4 +51,22 @@ for x in test_X:
 pyplot.plot(train_y)
 pyplot.plot([None for i in train_y] + [x for x in test_y])
 pyplot.plot([None for i in train_y] + [x for x in predictions])
+print(len)
 pyplot.show()
+
+print(len(train_y), len(test_y))
+print(len(train_y), len(predictions))
+print(len(train_y)+len(predictions))
+
+predictions = predictions
+
+import matplotlib.pyplot as plt
+
+#lines = plt.plot(predictions)
+#print(lines)
+
+
+
+
+
+
