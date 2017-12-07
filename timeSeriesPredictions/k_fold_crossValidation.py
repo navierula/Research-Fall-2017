@@ -7,11 +7,11 @@ import nltk # needed for Naive-Bayes
 import numpy as np
 from sklearn.model_selection import KFold
 
-import pandas
-from pandas import read_csv
-from pandas import datetime
 
-data = read_csv('data/130N_Cycles_1-47.csv', header=0, parse_dates=[0], index_col=0, squeeze=True)
+from pandas import read_csv
+
+
+data = read_csv('data/130N_Cycles_1-47.csv')
 
 # data is an array with our already pre-processed dataset examples
 kf = KFold(n_splits=3)
