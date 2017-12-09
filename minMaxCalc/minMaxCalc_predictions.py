@@ -38,6 +38,13 @@ for item in df.index:
 round_one = []
 for item in df.index:
     round_one.append(df["Round_One"][item])
+    
+predicted_val = []
+with open("predicted_load.txt") as file:
+    for l in file:
+        l = l.strip('\n')
+        predicted_val.append(l)
+
  
 # define generator function to determine start 
 # and end points for min and max values
@@ -57,11 +64,11 @@ def get_groups(lst):
 
 # append all returned values to a list
 points = []
-for t in get_groups(round_zero):
+for t in get_groups(predicted_val):
     points.append(t)
   
 # assign result get_groups to variable
-gen = get_groups(round_zero)
+gen = get_groups(predicted_val)
 
 mins = []
 maxes = []
@@ -97,6 +104,8 @@ gen = get_groups(maxes)
 final_min_max = []
 for i, (t1, t2) in enumerate(zip(gen, gen), 1):
     final_min_max.append((t1,t2))
+    
+final_min_max[0:5]
 
 # proceed with next steps
 
@@ -107,88 +116,88 @@ for i, (t1, t2) in enumerate(zip(gen, gen), 1):
 
 # combine data only with min and max labels,
 # THEN, append time    
-combine_data = []
-for i in range(len(load)):
-    flag = 0
-    for j in final_min_max:
-        if i == j[0][2]:
-            combine_data.append((load[i], "min"))
-            flag = 1
-        if i == j[1][2]:
-            combine_data.append((load[i], "max"))
-            flag = 1
-    if flag == 0:
-        combine_data.append((load[i], "NA"))
-    
-# combine data with time
-data_with_time = []
-for i, j in zip(time, combine_data):
-    data_with_time.append((i,) +j)
-    
-# calculate time for each cycle
-it = iter(data_with_time)
-
-out = []
-ap = [next(it)[0]]
-for e,_,state in it:
-    if state == 'min':
-        out.append(ap)
-        ap = []
-    ap += [e]
-out.append(ap)
-
-final_times = []
-for item in out:
-    final_times.append(item[-1]-item[0])
-    
-final_times = final_times[1:]
-    
-#########################
-min_lst = []
-max_lst = []
-for item in combine_data:
-    if item[1] == "min":
-        min_lst.append(item[0])
-    if item[1] == "max":
-        max_lst.append(item[0])
-#########################
-    
-lst = data_with_time
-
-low_lst = []
-high_lst = []
-
-STATE = None
-state_dict = {'min': low_lst, 'max': high_lst}
-
-for x, y, z in lst:
-    if z=='min' or z=='max':
-        STATE = z
-        sublist = []
-        state_dict[STATE].append(sublist)
-        sublist.append(x)
-    if STATE and z=='NA':
-        sublist.append(x)
-
-###############################################
-    
-data_ = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112,
-             108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
-
-
-# heating time
-low_res = []
-for item in low_lst:
-    low_res.append(item[-1]-item[0])
-    
-high_res = []
-for item in high_lst:
-    high_res.append(item[-1]-item[0])
-    
-###########
-cycles = []
-for i in range(1,48):
-    cycles.append(i)
+#combine_data = []
+#for i in range(len(load)):
+#    flag = 0
+#    for j in final_min_max:
+#        if i == j[0][2]:
+#            combine_data.append((load[i], "min"))
+#            flag = 1
+#        if i == j[1][2]:
+#            combine_data.append((load[i], "max"))
+#            flag = 1
+#    if flag == 0:
+#        combine_data.append((load[i], "NA"))
+#    
+## combine data with time
+#data_with_time = []
+#for i, j in zip(time, combine_data):
+#    data_with_time.append((i,) +j)
+#    
+## calculate time for each cycle
+#it = iter(data_with_time)
+#
+#out = []
+#ap = [next(it)[0]]
+#for e,_,state in it:
+#    if state == 'min':
+#        out.append(ap)
+#        ap = []
+#    ap += [e]
+#out.append(ap)
+#
+#final_times = []
+#for item in out:
+#    final_times.append(item[-1]-item[0])
+#    
+#final_times = final_times[1:]
+#    
+##########################
+#min_lst = []
+#max_lst = []
+#for item in combine_data:
+#    if item[1] == "min":
+#        min_lst.append(item[0])
+#    if item[1] == "max":
+#        max_lst.append(item[0])
+##########################
+#    
+#lst = data_with_time
+#
+#low_lst = []
+#high_lst = []
+#
+#STATE = None
+#state_dict = {'min': low_lst, 'max': high_lst}
+#
+#for x, y, z in lst:
+#    if z=='min' or z=='max':
+#        STATE = z
+#        sublist = []
+#        state_dict[STATE].append(sublist)
+#        sublist.append(x)
+#    if STATE and z=='NA':
+#        sublist.append(x)
+#
+################################################
+#    
+#data_ = [0.5, 3, 6, 40, 90, 130.8, 129, 111, 8, 9, 0.01, 9, 40, 90, 130.1, 112,
+#             108, 90, 77, 68, 0.9, 8, 40, 90, 92, 130.4]
+#
+#
+## heating time
+#low_res = []
+#for item in low_lst:
+#    low_res.append(item[-1]-item[0])
+#    
+#high_res = []
+#for item in high_lst:
+#    high_res.append(item[-1]-item[0])
+#    
+############
+#cycles = []
+#for i in range(1,48):
+#    cycles.append(i)
 ##########
     
 """
