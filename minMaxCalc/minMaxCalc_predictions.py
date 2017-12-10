@@ -40,7 +40,7 @@ for item in df.index:
     round_one.append(df["Round_One"][item])
     
 predicted_val = []
-with open("predicted_load.txt") as file:
+with open("predicted_load_start.txt") as file:
     for l in file:
         l = l.strip('\n')
         predicted_val.append(l)
@@ -209,31 +209,31 @@ high_res - cooling time
 low_res - heating time
 """
 
-final = []
-for a, b, c, d, e, f in zip(cycles, min_lst, max_lst, final_times, high_res, low_res):
-    final.append((a,b,c,d,e,f))
-
-
-with open("final.txt", "w") as fp:
-    for item in final:
-        fp.write("Cycle: %s" % str(item[0]) + "\n")
-        fp.write("Minimum value: %s" % str(item[1]) + "\n")
-        fp.write("Maximum value: %s" % str(item[2]) + "\n")
-        fp.write("Total time per cycle: %s" % str(item[3]) + "\n")
-        fp.write("Cooling time per cycle: %s" % str(item[4]) + "\n")
-        fp.write("Heating time per cycle: %s" % str(item[5]) + "\n\n")
-        
-import csv
-
-data= final
-
-with open('final.csv','w') as out:
-    csv_out=csv.writer(out)
-    csv_out.writerow(['cycle', 'local_min', 'local_max', 'total_time', 'cooling_time', 'heating_time'])
-    for row in data:
-        csv_out.writerow(row)  
- 
-print("done")
+#final = []
+#for a, b, c, d, e, f in zip(cycles, min_lst, max_lst, final_times, high_res, low_res):
+#    final.append((a,b,c,d,e,f))
+#
+#
+#with open("final.txt", "w") as fp:
+#    for item in final:
+#        fp.write("Cycle: %s" % str(item[0]) + "\n")
+#        fp.write("Minimum value: %s" % str(item[1]) + "\n")
+#        fp.write("Maximum value: %s" % str(item[2]) + "\n")
+#        fp.write("Total time per cycle: %s" % str(item[3]) + "\n")
+#        fp.write("Cooling time per cycle: %s" % str(item[4]) + "\n")
+#        fp.write("Heating time per cycle: %s" % str(item[5]) + "\n\n")
+#        
+#import csv
+#
+#data= final
+#
+#with open('final.csv','w') as out:
+#    csv_out=csv.writer(out)
+#    csv_out.writerow(['cycle', 'local_min', 'local_max', 'total_time', 'cooling_time', 'heating_time'])
+#    for row in data:
+#        csv_out.writerow(row)  
+# 
+#print("done")
 # put data into a .csv (table)
         
 
