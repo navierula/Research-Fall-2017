@@ -40,7 +40,7 @@ def predict(coef, history):
  
 series = Series.from_csv('data/130N_Cycles_1-47.csv', header=0)
 # split dataset
-X = difference(series.values)
+X = series.values
 size = int(len(X) * 0.70)
 #size = int(len(X))
 train, test = X[0:size], X[size:]
@@ -62,8 +62,10 @@ for t in range(len(test)):
 error = mean_squared_error(test, predictions)
 print('Test MSE: %.3f' % error)
 # plot
-pyplot.plot(test)
-pyplot.plot(predictions, color='green')
+pyplot.plot(test[:],linewidth=2, color='navy')
+pyplot.plot(predictions[:], color='magenta',linewidth=2)
+pyplot.xlabel('Row Index')
+pyplot.ylabel('Load')
 pyplot.show()
 
 
