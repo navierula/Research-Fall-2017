@@ -21,6 +21,8 @@ print(series.head())
 
 # plot entire dataset
 series.plot()
+pyplot.xlabel('Row Index')
+pyplot.ylabel('Row Index')
 pyplot.show()
 
 # create a difference transform of the dataset
@@ -62,10 +64,10 @@ for t in range(len(test)):
 error = mean_squared_error(test, predictions)
 print('Test MSE: %.3f' % error)
 # plot
-pyplot.plot(test[:],linewidth=2, color='navy')
+pyplot.plot(test[:],linewidth=2, color='navy',label='Data length')
 pyplot.plot(predictions[:], color='magenta',linewidth=2)
-pyplot.xlabel('Row Index')
-pyplot.ylabel('Load')
+pyplot.xlabel('Time [Minutes]')
+pyplot.ylabel('Load [Newtons]')
 pyplot.show()
 
 

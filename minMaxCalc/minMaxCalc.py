@@ -1,4 +1,5 @@
 import pandas as pd
+from numpy import array
 
 # read in dataset
 xl = pd.ExcelFile("data/130N_Cycles_1-47.xlsx")
@@ -49,7 +50,18 @@ data = []
 for i, j in zip(time, load):
     data.append((i,j))
     
-lst = load
+lst = array(load)
+
+import numpy as np
+from scipy.signal import argrelextrema
+
+
+
+# for local maxima
+argrelextrema(lst, np.greater)
+
+# for local minima
+argrelextrema(lst, np.less)
 
 def get_groups(lst):
     up = False
@@ -66,9 +78,9 @@ def get_groups(lst):
         yield 'End', i + 1, lst[-1]
 
 
-gen = get_groups(lst)
-for i, (t1, t2) in enumerate(zip(gen, gen), 1):
-    print(i, t1, t2)
+#gen = get_groups(lst)
+#for i, (t1, t2) in enumerate(zip(gen, gen), 1):
+#    print(i, t1, t2)
     
 
 

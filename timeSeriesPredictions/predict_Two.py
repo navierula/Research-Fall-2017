@@ -49,6 +49,8 @@ for x in test_X:
 
 # plot predictions and expected results
 pyplot.plot(train_y)
+pyplot.xlabel('Time [Minutes]')
+pyplot.ylabel('Load [Newtons]')
 pyplot.plot([None for i in train_y] + [x for x in test_y])
 pyplot.plot([None for i in train_y] + [x for x in predictions])
 print(len)

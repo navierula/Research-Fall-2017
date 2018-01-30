@@ -57,11 +57,11 @@ def get_groups(lst):
 
 # append all returned values to a list
 points = []
-for t in get_groups(round_zero):
+for t in get_groups(load):
     points.append(t)
   
 # assign result get_groups to variable
-gen = get_groups(round_zero)
+gen = get_groups(load)
 
 mins = []
 maxes = []
